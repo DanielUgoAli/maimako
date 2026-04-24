@@ -81,14 +81,14 @@ export default function Hero() {
 
       <section
         id="about"
-        className="relative z-10 mx-auto flex min-h-screen w-full max-w-280 flex-col justify-center px-5 pb-44 pt-38 sm:px-10 sm:pb-48 lg:h-dvh lg:min-h-0 lg:pb-24 lg:pl-68 xl:pl-84"
+        className="relative z-10 mx-auto flex min-h-screen w-full max-w-280 flex-col justify-center px-4 pb-52 pt-30 sm:px-10 sm:pb-52 sm:pt-36 lg:h-dvh lg:min-h-0 lg:pb-24 lg:pl-68 xl:pl-84"
       >
         <div className="relative z-10 flex flex-col items-start justify-between gap-12 lg:flex-row lg:items-end lg:gap-20">
           <div className="max-w-155">
             <h1
               className={cn(
                 playfair.className,
-                "animate-in fade-in slide-in-from-bottom-7 duration-700 delay-200 fill-mode-both text-[56px] leading-none tracking-[-0.02em] text-[#173022] sm:text-[74px] md:text-[88px]",
+                "animate-in fade-in slide-in-from-bottom-7 duration-700 delay-200 fill-mode-both text-[42px] leading-none tracking-[-0.02em] text-[#173022] sm:text-[74px] md:text-[88px]",
               )}
             >
               Maimako
@@ -113,23 +113,23 @@ export default function Hero() {
             <div className="mt-10 flex flex-wrap items-center gap-4 animate-in fade-in slide-in-from-bottom-5 duration-700 delay-1000 fill-mode-both">
               <Button
                 asChild
-                className="h-auto rounded-full border border-[#24543a]/30 bg-[#d8efde] px-8 py-3.5 text-[12px] tracking-[0.08em] text-[#173022] uppercase hover:bg-[#cde8d4]!"
+                className="h-auto rounded-full border border-[#24543a]/30 bg-[#d8efde] px-6 py-3 text-[11px] tracking-[0.08em] text-[#173022] uppercase hover:bg-[#cde8d4]! sm:px-8 sm:py-3.5 sm:text-[12px]"
               >
-                <Link href="#platform">Learn More</Link>
+                <Link href="/about">Learn More</Link>
               </Button>
               <Button
                 asChild
                 variant="outline"
-                className="h-auto rounded-full border border-[#b3882a]/45 bg-[#fff7e5] px-8 py-3.5 text-[12px] tracking-[0.08em] text-[#7a5a1c] uppercase hover:bg-[#f6e9ca]"
+                className="h-auto rounded-full border border-[#b3882a]/45 bg-[#fff7e5] px-6 py-3 text-[11px] tracking-[0.08em] text-[#7a5a1c] uppercase hover:bg-[#f6e9ca] sm:px-8 sm:py-3.5 sm:text-[12px]"
               >
-                <Link href="#platform">Manifesto</Link>
+                <Link href="/manifesto">Manifesto</Link>
               </Button>
             </div>
           </div>
 
           <aside
             id="platform"
-            className="flex w-full max-w-70 flex-col gap-6 animate-in fade-in slide-in-from-bottom-6 duration-700 delay-[600ms] fill-mode-both lg:items-end"
+            className="flex w-full max-w-95 flex-col gap-6 animate-in fade-in slide-in-from-bottom-6 duration-700 delay-[600ms] fill-mode-both lg:max-w-70 lg:items-end"
           >
             <div className="grid w-full grid-cols-2 gap-6">
               {STATS.map((stat) => (
@@ -183,22 +183,16 @@ export default function Hero() {
           </aside>
         </div>
 
-        <div className="relative z-10 mt-20 flex items-center gap-3 animate-in fade-in duration-1000 delay-[1400ms] fill-mode-both opacity-40 lg:pl-4">
-          <div className="h-12 w-px bg-[#24543a]" />
-          <span className="text-[11px] tracking-widest text-[#24543a]/80 uppercase">
-            Scroll to explore
-          </span>
-        </div>
-
-        <div className="pointer-events-none absolute bottom-0 -left-12 z-0 translate-y-4 -sm:left-8 sm:translate-y-3 lg:bottom-0 -lg:left-12 lg:translate-y-5 -xl:left-14">
+        <div className="pointer-events-none absolute top-20 right-4 z-0 opacity-80 sm:top-24 sm:right-8 sm:w-auto lg:-left-12 lg:top-auto lg:right-auto lg:bottom-0 lg:translate-y-5 lg:opacity-100 xl:-left-14">
           <Image
             src="/maimako.png"
             alt="Maimako campaign character"
             width={700}
             height={1100}
             priority
-            className="h-auto w-40 object-contain sm:w-52 lg:w-72 xl:w-84 2xl:w-96"
+            className="h-auto w-44 -scale-x-100 object-contain sm:w-64 lg:scale-x-100 lg:w-72 xl:w-84 2xl:w-96"
           />
+          <div className="absolute inset-x-0 -bottom-1 h-12 bg-gradient-to-b from-transparent to-white sm:h-14 lg:hidden" />
         </div>
       </section>
 
