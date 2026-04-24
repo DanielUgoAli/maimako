@@ -1,20 +1,16 @@
 {
   "$schema": "https://ui.shadcn.com/schema.json",
-  "style": "radix-nova",
+  "style": "radix-lyra",
   "rsc": true,
   "tsx": true,
   "tailwind": {
-<<<<<<< Updated upstream
-    "config": "tailwind.config.ts",
-=======
     "config": "",
->>>>>>> Stashed changes
     "css": "app/globals.css",
     "baseColor": "neutral",
     "cssVariables": true,
     "prefix": ""
   },
-  "iconLibrary": "lucide",
+  "iconLibrary": "phosphor",
   "rtl": false,
   "aliases": {
     "components": "@/components",
@@ -25,11 +21,5 @@
   },
   "menuColor": "default",
   "menuAccent": "subtle",
-<<<<<<< Updated upstream
-  "registries": {
-    "@react-bits": "https://reactbits.dev/r/{name}.json"
-  }
-=======
   "registries": {}
->>>>>>> Stashed changes
 }
