@@ -1,13 +1,5 @@
-import Hero from "@/components/Hero";
-import Navbar from "@/components/Navbar";
+import Hero from "@/components/hero";
 
-export default function HomePage() {
-  return (
-    <div className="h-screen overflow-hidden bg-white">
-      <Navbar />
-      <main className="h-full overflow-hidden pt-20">
-        <Hero />
-      </main>
-    </div>
-  );
+export default function Home() {
+  return <Hero />;
 }

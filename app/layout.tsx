@@ -1,46 +1,37 @@
 import type { Metadata } from "next";
-import {  Poppins, Space_Grotesk } from "next/font/google";
+import { Geist, Geist_Mono, JetBrains_Mono } from "next/font/google";
+import "./globals.css";
 import { cn } from "@/lib/utils";
-import LoadingOverlay from "@/components/LoadingOverlay";
 
-// Removed unknown `Geist` font (not available via next/font/google)
+const jetbrainsMono = JetBrains_Mono({subsets:['latin'],variable:'--font-mono'});
 
-const poppins = Poppins({
-  subsets: ['latin'],
-  weight: ['400', '700'], // Add specific weights as strings
-  variable: '--font-poppins', // Useful for Tailwind or CSS variables
+const geistSans = Geist({
+  variable: "--font-geist-sans",
+  subsets: ["latin"],
 });
 
-const spaceGrotesk = Space_Grotesk({
+const geistMono = Geist_Mono({
+  variable: "--font-geist-mono",
   subsets: ["latin"],
-  variable: "--font-space-grotesk"
 });
 
 export const metadata: Metadata = {
-  title: "Maimako2026 | NUASA Campaign",
-  description: "Your Vote. Our Future. NUASA 2026.",
-  icons: {
-    icon: "/favicon/favicon.ico",
-    shortcut: "/favicon/favicon-32x32.png",
-    apple: "/favicon/apple-icon.png",
-    other: [
-      { rel: "manifest", url: "/favicon/manifest.json" },
-      { rel: "msapplication-TileImage", url: "/favicon/ms-icon-144x144.png" }
-    ]
-  }
+  title: "Maimako",
+  description: "Vote for Maimako for NUASA 2026.",
+  icons: { icon: "/favicon/favicon.png" },
 };
 
 export default function RootLayout({
-  children
+  children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={cn("font-sans")}>
-      <body className={`${poppins.variable} ${spaceGrotesk.variable} font-[var(--font-poppins)]`}>
-        <LoadingOverlay />
-        {children}
-      </body>
+    <html
+      lang="en"
+      className={cn("h-full", "antialiased", geistSans.variable, geistMono.variable, "font-mono", jetbrainsMono.variable)}
+    >
+      <body className="min-h-full flex flex-col">{children}</body>
     </html>
   );
 }
