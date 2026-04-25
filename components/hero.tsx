@@ -23,7 +23,7 @@ const STATS = [
 
 const SPONSORS = [
   {
-    name: "Foundation",
+    name: "Maimako Foundation",
     src: "/foundation.png",
     width: 38,
     height: 38,
