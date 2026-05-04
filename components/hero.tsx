@@ -28,12 +28,12 @@ const SPONSORS = [
     width: 38,
     height: 38,
   },
-  // {
-  //   name: "APC Nigeria",
-  //   src: "/apc.jpg",
-  //   width: 38,
-  //   height: 38,
-  // },
+  {
+    name: "APC Nigeria",
+    src: "/apc.jpg",
+    width: 38,
+    height: 38,
+  },
   {
     name: "Revolution Party",
     src: "/revolution.png",
